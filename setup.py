@@ -14,7 +14,10 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ChrisByrd14/masonite_py_to_js",
-    packages=['py2js'],
+    packages=[
+        'py2js',
+        'py2js.transformers',
+    ],
     install_requires=['masonite>=2.0.4'],
     classifiers=(
         "Intended Audience :: Developers",

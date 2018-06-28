@@ -1,4 +1,8 @@
-
+from py2js.transformers import (
+    DictTransformer,
+    ListTransformer,
+    TupleTransformer,
+)
 
 class PythonToJavascript:
 
