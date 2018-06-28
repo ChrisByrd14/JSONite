@@ -2,7 +2,7 @@ from masonite.provider import ServiceProvider
 
 from .PythonToJavascript import PythonToJavascript
 
-class Py2JsServiceProvider(ServiceProvider):
+class PythonToJavascriptServiceProvider(ServiceProvider):
     ''' Bind Py2Js class into the Service Container '''
 
     wsgi = True
