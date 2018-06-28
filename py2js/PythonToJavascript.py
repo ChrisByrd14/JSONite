@@ -2,6 +2,9 @@
 
 class PythonToJavascript:
 
+    data = {}
+    script_string = '<script>{}</script>'
+
     @staticmethod
-    def put(self, *args, **kwargs):
-        pass
+    def put(data={}):
+        PythonToJavascript.data.update(data)
