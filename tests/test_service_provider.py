@@ -23,3 +23,4 @@ def test_service_provider_passes_service_class_to_container():
     provider.app = app
     provider.register()
     app.bind.assert_called_with('PythonToJavascript', PythonToJavascript)
+

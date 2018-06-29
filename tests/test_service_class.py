@@ -21,3 +21,4 @@ def test_put_method_appends_data_when_static_data_not_empty():
     PythonToJavascript.put(values_2)
     values_1.update(values_2)
     assert PythonToJavascript.data == values_1
+
