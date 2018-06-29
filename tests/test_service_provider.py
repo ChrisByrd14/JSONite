@@ -10,6 +10,7 @@ from py2js.PythonToJavascriptServiceProvider import PythonToJavascriptServicePro
 def test_service_provider_exists():
     assert issubclass(PythonToJavascriptServiceProvider, ServiceProvider)
 
+
 def test_service_provider_register_method_binds_to_container():
     app = Mock()
     provider = PythonToJavascriptServiceProvider()
@@ -17,10 +18,10 @@ def test_service_provider_register_method_binds_to_container():
     provider.register()
     app.bind.assert_called_once()
 
+
 def test_service_provider_passes_service_class_to_container():
     app = Mock()
     provider = PythonToJavascriptServiceProvider()
     provider.app = app
     provider.register()
-    app.bind.assert_called_with('PythonToJavascript', PythonToJavascript)
-
+    app.bind.assert_called_with("PythonToJavascript", PythonToJavascript)

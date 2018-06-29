@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('README.md', 'r') as file:
+with open("README.md", "r") as file:
     long_description = file.read()
 
 setup(
@@ -14,11 +14,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ChrisByrd14/masonite_py_to_js",
-    packages=[
-        'py2js',
-        'py2js.transformers',
-    ],
-    install_requires=['masonite>=2.0.4'],
+    packages=["py2js", "py2js.transformers"],
+    install_requires=["masonite>=2.0.4"],
     classifiers=(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",

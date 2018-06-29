@@ -1,13 +1,10 @@
-from py2js.transformers import (
-    DictTransformer,
-    ListTransformer,
-    TupleTransformer,
-)
+from py2js.transformers import DictTransformer, ListTransformer, TupleTransformer
+
 
 class PythonToJavascript:
 
     data = {}
-    script_string = '<script>{}</script>'
+    script_string = "<script>{}</script>"
 
     @staticmethod
     def put(data={}):
