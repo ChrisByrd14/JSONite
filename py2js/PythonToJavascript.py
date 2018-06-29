@@ -1,4 +1,4 @@
-from py2js.transformers import DictTransformer, ListTransformer, TupleTransformer
+from py2js.transformers import Transformer, ClassTransformer
 
 
 class PythonToJavascript:

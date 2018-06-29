@@ -1,6 +1,6 @@
 from .transformer import Transformer
 
 
-class StringTransformer(Transformer):
+class ClassTransformer:
     def __init__(self):
         pass
