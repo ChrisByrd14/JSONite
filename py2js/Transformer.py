@@ -5,6 +5,12 @@ from orator import Model
 
 
 class Encoder(JSONEncoder):
+    """ JSON encoder for class instances.
+
+    Orator models will encode their attributes only
+    All others will encode all fields under the __dict__ attribute
+    """
+
     def default(self, obj):
         if isinstance(obj, Model):
             return obj.__dict__['_original']
@@ -12,7 +18,7 @@ class Encoder(JSONEncoder):
 
 
 class Transformer:
-    """ This is the class that transforms Python variables to Javascript. """
+    """ Transforms Python variables to Javascript. """
 
     declaration = '.{} = {};'
 

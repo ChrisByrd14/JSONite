@@ -1,6 +1,6 @@
 import os
 
-from py2js.transformers import Transformer
+from py2js.Transformer import Transformer
 
 
 class DummyClass:

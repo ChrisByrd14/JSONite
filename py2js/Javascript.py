@@ -1,7 +1,7 @@
-from py2js.transformers import Transformer, ClassTransformer
+from py2js.Transformer import Transformer
 
 
-class PythonToJavascript:
+class Javascript:
 
     data = {}
     namespace = "window"
@@ -9,7 +9,7 @@ class PythonToJavascript:
 
     @staticmethod
     def put(data={}):
-        PythonToJavascript.data.update(data)
+        Javascript.data.update(data)
 
     @staticmethod
     def render():

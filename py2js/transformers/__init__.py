@@ -1,2 +1,0 @@
-from py2js.transformers.classtransformer import ClassTransformer
-from py2js.transformers.transformer import Transformer
