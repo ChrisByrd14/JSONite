@@ -5,7 +5,7 @@ class Javascript:
 
     data = {}
     namespace = "window"
-    script_string = "<script>{}</script>"
+    script_string = "<script>\n{}\n</script>"
 
     @staticmethod
     def put(data={}):
@@ -13,4 +13,7 @@ class Javascript:
 
     @staticmethod
     def render():
-        pass
+        transformer = Transformer()
+        data = [transformer.convert(key, value) for key, value in Javascript.data.items()]
+        return Javascript.script_string.format('\n'.join(data))
+
