@@ -1,6 +1,6 @@
 import os
 
-from py2js.Transformer import Transformer
+from jsonite import Transformer
 
 
 class DummyClass:

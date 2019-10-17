@@ -4,7 +4,7 @@ from .Javascript import Javascript
 
 
 class JavascriptProvider(ServiceProvider):
-    """ Bind Py2Js class into the Service Container """
+    """Bind Javascript class into the Service Container."""
 
     wsgi = True
 
@@ -13,3 +13,4 @@ class JavascriptProvider(ServiceProvider):
 
     def register(self):
         self.app.bind("Javascript", Javascript)
+

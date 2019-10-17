@@ -1,4 +1,4 @@
-from py2js.Transformer import Transformer
+from jsonite.Transformer import Transformer
 
 
 class Javascript:

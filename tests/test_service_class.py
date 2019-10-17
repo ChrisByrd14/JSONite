@@ -1,6 +1,6 @@
 import pytest
 
-from py2js.Javascript import Javascript
+from jsonite.Javascript import Javascript
 
 
 def test_service_data_is_accessible():

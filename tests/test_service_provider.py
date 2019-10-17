@@ -3,8 +3,8 @@ from unittest.mock import Mock
 from masonite.provider import ServiceProvider
 import pytest
 
-from py2js.Javascript import Javascript
-from py2js.JavascriptProvider import JavascriptProvider
+from jsonite import Javascript
+from jsonite import JavascriptProvider
 
 
 def test_service_provider_exists():
