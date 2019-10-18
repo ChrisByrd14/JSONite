@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 import pytest
 
 from jsonite.Javascript import Javascript
@@ -74,3 +76,16 @@ let jsonite = {
 </script>
 '''
     assert Javascript.render() == expected_string.strip()
+
+@patch('os.getenv', lambda x, y: 'test_value')
+def test_render_method_uses_environment_variables_when_available():
+    Javascript.put(DummyClass())
+    expected = '''
+<script>
+let test_value = {
+    "DummyClass": {"foo": "bar", "baz": 12345.6},
+};
+</script>
+'''
+    assert Javascript.render() == expected.strip()
+

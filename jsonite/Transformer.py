@@ -2,7 +2,6 @@
 from collections import Iterable
 from inspect import isclass
 from json import dumps, JSONEncoder
-from os import getenv as env
 
 from orator import Model
 
@@ -28,7 +27,6 @@ class Transformer:
     declaration = '.{} = {};'
 
     def __init__(self):
-        # self.declaration = env('JS_NAMESPACE', 'jsonite') + self.declaration
         self.declaration = '"{}": {},'
         self.encoder = Encoder()
 
