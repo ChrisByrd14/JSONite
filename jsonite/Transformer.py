@@ -15,8 +15,10 @@ class Encoder(JSONEncoder):
     """
 
     def default(self, obj):
-        if isinstance(obj, Model):
-            return obj.__dict__['_original']
+        try:
+            return obj['_attributes']
+        except:
+            pass
         return obj.__dict__
 
 

@@ -51,7 +51,7 @@ def test_put_method_can_take_an_ambiguous_number_of_arguments():
 
     expected_string = '''
 <script>
-let jsonite.data = {
+let jsonite = {
     "a": 1,
     "b": 2,
     "an_object": {"foo": "bar", "baz": 12345.6},
@@ -68,7 +68,7 @@ def test_put_method_can_take_class_instance_as_positional_argument():
     Javascript.put(dummy)
     expected_string = '''
 <script>
-let jsonite.data = {
+let jsonite = {
     "DummyClass": {"foo": "bar", "baz": 12345.6},
 };
 </script>
