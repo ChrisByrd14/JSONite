@@ -35,7 +35,7 @@ class Javascript:
         tran = Transformer()
         data = [tran.convert(k, v) for k, v in Javascript.data.items()]
 
-        identifier = os.getenv('JS_NAMESPACE', 'jsonite') + '.data'
+        identifier = os.getenv('JS_NAMESPACE', 'jsonite')
         data_string = '\n    '.join(data)
 
         result = Javascript.script_string.format(
