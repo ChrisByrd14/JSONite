@@ -30,9 +30,9 @@ class Transformer:
         self.declaration = '"{}": {},'
         self.encoder = Encoder()
 
-    def convert(self, key, value):
-        if isinstance(value, Iterable) and not isinstance(value, str):
-            value = list(value)
+    def convert(self, key, val):
+        if isinstance(val, Iterable) and not isinstance(val, (str, dict)):
+            val = list(val)
 
-        return self.declaration.format(key, self.encoder.encode(value))
+        return self.declaration.format(key, self.encoder.encode(val))
 

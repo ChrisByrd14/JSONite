@@ -32,9 +32,3 @@ def test_convert_class():
     converted = (Transformer()).convert("some_class", klass)
     assert converted == '"some_class": {"foo": "bar", "baz": 12345.6},'
 
-
-def test_namspace():
-    os.environ['JS_NAMESPACE'] = 'my_app'
-    converted = (Transformer()).convert("some_int", 12)
-    assert converted == '"some_int": 12,'
-

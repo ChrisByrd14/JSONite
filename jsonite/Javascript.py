@@ -8,6 +8,7 @@ class Javascript:
 
     data = {}
     script_string = "<script>\nlet {} = {}\n</script>"
+    native_types = ('int', 'float', 'list', 'tuple', 'set')
 
     @staticmethod
     def put(*args, **kwargs):  #={}):
@@ -19,16 +20,15 @@ class Javascript:
             Javascript.put(user=user_object)
         """
         for arg in args:
-            if isclass(arg):
-                arg = {arg.__class__.__name__: arg.__dict__}
+            if isinstance(arg, list):
+                raise TypeError('Pass lists as a keyword argument.')
 
+            arg = Javascript.parse_arg(arg)
             Javascript.data.update(arg)
 
         for kw in kwargs:
-            if isclass(kwargs[kw]):
-                kwargs[kw] = kwargs[kw].__dict__
-            Javascript.data.update({kw: kwargs[kw]})
-
+            arg = Javascript.parse_arg(kwargs[kw], kw)
+            Javascript.data.update(arg)
 
     @staticmethod
     def render():
@@ -39,9 +39,22 @@ class Javascript:
         data_string = '\n    '.join(data)
 
         result = Javascript.script_string.format(
-            identifier, '{\n    ' + data_string + '\n}'
+            identifier, '{\n    ' + data_string + '\n};'
         )
 
         Javascript.data = dict()
         return result
+
+    @staticmethod
+    def parse_arg(arg, keyword=None):
+        name = arg.__class__.__name__
+        try:
+            data = arg
+            if name not in Javascript.native_types:
+                data = arg.__dict__
+            return { name: data } if keyword is None else {keyword: data}
+        except Exception as e:
+            pass
+
+        return arg if keyword is None else {keyword: arg}
 
