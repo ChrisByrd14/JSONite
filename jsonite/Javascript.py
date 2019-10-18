@@ -11,7 +11,7 @@ class Javascript:
     native_types = ('int', 'float', 'list', 'tuple', 'set')
 
     @staticmethod
-    def put(*args, **kwargs):  #={}):
+    def put(*args, **kwargs):
         """Add the provided parameters to the Javascript object.
 
         Examples:

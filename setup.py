@@ -5,7 +5,7 @@ with open('README.md', 'r') as file:
 
 setuptools.setup(
     name = 'JSONite',
-    version = '0.0.8',
+    version = '0.0.2',
     author = 'Chris Byrd',
     author_email = 'christopher.byrd2013@gmail.com',
     description = (
@@ -15,7 +15,7 @@ setuptools.setup(
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/ChrisByrd14/JSONite',
     packages = setuptools.find_packages(),
-    install_requires = ['masonite>=2.0.4'],
+    install_requires = ['masonite>=2'],
     classifiers = (
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
