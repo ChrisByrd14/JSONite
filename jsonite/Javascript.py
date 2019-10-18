@@ -35,6 +35,9 @@ class Javascript:
         tran = Transformer()
         data = [tran.convert(k, v) for k, v in Javascript.data.items()]
 
+        if not data:
+            return ''
+
         identifier = os.getenv('JS_NAMESPACE', 'jsonite')
         data_string = '\n    '.join(data)
 
@@ -52,9 +55,10 @@ class Javascript:
             data = arg
             if name not in Javascript.native_types:
                 data = arg.__dict__
-            return { name: data } if keyword is None else {keyword: data}
+
+            return { name: data } if not keyword else { keyword.lower(): data }
         except Exception as e:
             pass
 
-        return arg if keyword is None else {keyword: arg}
+        return arg if keyword is None else {keyword.lower(): arg}
 
