@@ -89,3 +89,7 @@ let test_value = {
 '''
     assert Javascript.render() == expected.strip()
 
+def test_empty_javascript_object_returns_empty_string():
+    Javascript.data = dict()
+    assert not Javascript.render()
+

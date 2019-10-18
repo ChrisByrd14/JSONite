@@ -32,11 +32,11 @@ class Javascript:
 
     @staticmethod
     def render():
+        if not Javascript.data:
+            return ''
+
         tran = Transformer()
         data = [tran.convert(k, v) for k, v in Javascript.data.items()]
-
-        if not data:
-            return ''
 
         identifier = os.getenv('JS_NAMESPACE', 'jsonite')
         data_string = '\n    '.join(data)

@@ -1,5 +1,6 @@
 # JSONite - The Python-to-Javascript variable transformer for Masonite
 
+This package is intended to be used alongsite the [Masonite Framework](https://github.com/MasoniteFramework/masonite) and allows you to pass Python variables to your base template. If no data is passed to the `Javascript` object on a particular request then the object returns an empty string, else it returns a JSON object featuring the passed data.
 
 ## Installation:
 
