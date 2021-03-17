@@ -1,7 +1,7 @@
 from inspect import isclass
 import os
 
-from jsonite.Transformer import Transformer
+from jsonite.transformer import Transformer
 
 
 class Javascript:

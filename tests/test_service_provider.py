@@ -3,9 +3,8 @@ from unittest.mock import Mock
 from masonite.provider import ServiceProvider
 import pytest
 
-from jsonite import Javascript
-from jsonite import JavascriptProvider
-
+from jsonite.javascript import Javascript
+from jsonite.provider import JavascriptProvider
 
 def test_service_provider_exists():
     assert issubclass(JavascriptProvider, ServiceProvider)

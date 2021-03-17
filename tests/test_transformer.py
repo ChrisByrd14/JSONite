@@ -1,6 +1,6 @@
 import os
 
-from jsonite import Transformer
+from jsonite.transformer import Transformer
 
 
 class DummyClass:

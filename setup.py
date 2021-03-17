@@ -5,7 +5,7 @@ with open('README.md', 'r') as file:
 
 setuptools.setup(
     name = 'JSONite',
-    version = '0.0.2',
+    version = '0.0.3',
     author = 'Chris Byrd',
     author_email = 'christopher.byrd2013@gmail.com',
     description = (

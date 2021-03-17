@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from jsonite.Javascript import Javascript
+from jsonite.javascript import Javascript
 
 
 from test_transformer import DummyClass
